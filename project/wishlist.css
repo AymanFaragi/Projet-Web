@@ -1,0 +1,225 @@
+.wishlist-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wishlist-title {
+  font-size: 2.25rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.wishlist-count {
+  font-size: 1rem;
+  color: var(--dark-text);
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 3rem 0;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+
+.empty-wishlist-content h2 {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.empty-wishlist-message {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.empty-wishlist-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 67, 54, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: #1a3529;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 67, 54, 0.2);
+}
+
+.btn-primary i {
+  margin-right: 0.5rem;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.wishlist-items-container {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.wishlist-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.wishlist-item {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.wishlist-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-item-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #f8f8f8;
+}
+
+.wishlist-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.wishlist-remove-form {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.wishlist-remove-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-remove-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.wishlist-item-details {
+  padding: 1.25rem;
+}
+
+.wishlist-item-name {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.wishlist-item-price {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.wishlist-stock {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wishlist-stock.in-stock {
+  color: var(--success-color);
+}
+
+.wishlist-stock.out-of-stock {
+  color: var(--danger-color);
+}
+
+.add-to-cart-form {
+  width: 100%;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1a3529;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+

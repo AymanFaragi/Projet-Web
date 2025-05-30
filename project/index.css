@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --primary-color: #254336;
+  --secondary-color: #6b8a7a;
+  --accent-color: #b7b597;
+  --dark-accent: #254336;
+  --text-color: #212121;
+  --light-text: #dad3be;
+  --card-bg: #fafafa;
+  --overlay-color: rgba(18, 18, 24, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 0 5%;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  height: 42px;
+  width: auto;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  background-color: #f5f3ff;
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  background-color: #f5f3ff;
+  font-weight: 600;
+}
+
+.nav-link span {
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover span {
+  transform: translateX(3px);
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 15px;
+}
+
+.main-banners {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 5%;
+}
+
+.product-banner {
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--overlay-color) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.banner-1 {
+  background-image: url("https://images.samsung.com/au/smartphones/galaxy-s25-ultra/images/galaxy-s25-ultra-share-image.jpg");
+}
+
+.banner-2 {
+  background-image: url("https://pixelplex.io/wp-content/uploads/2023/06/overview-of-apple-vision-pro-and-its-prospects-main-1600.jpg");
+}
+
+.product-content {
+  max-width: 800px;
+  color: var(--light-text);
+  z-index: 2;
+  position: relative;
+}
+
+.product-tag {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.product-content h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.product-description {
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+}
+
+.price-tag {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--light-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 24px;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.primary-btn:hover {
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--light-text);
+  border: 2px solid var(--light-text);
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.product-highlights {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+}
+
+.product-cards-section {
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  position: relative;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .card-image {
+  transform: scale(1.03);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.discount-badge {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-details {
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card-description {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-price {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.current-price {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.original-price {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.card-btn {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.card-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.wishlist-btn,
+.quickview-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-btn:hover,
+.quickview-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+
+.section-header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 42%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
